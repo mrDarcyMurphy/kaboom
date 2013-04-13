@@ -1,12 +1,35 @@
 var Stack = function(stack) {
-  this.stack = Array.isArray(stack) ? stack : []
-  this.length = this.stack.length
+
+  /**
+   * the stack
+   * @api private
+   */
+  var stack = Array.isArray(stack) ? stack : []
+
+  /**
+   * returns length/size of stack
+   * @api public
+   */
+  this.length = stack.length
+
+  /**
+   * the top value in the stack
+   * @api public
+   */
+  this.top = stack[stack.length-1]
+
+  /**
+   * pushes new value onto stack
+   * @param {Object} thing to push onto the stack
+   * @api public
+   */
+  this.push = function(i) {
+    this.length = stack.push(i)
+    this.top = stack[this.length-1]
+    return this.length
+  }
+
+
 }
-
-Stack.prototype.push = function(i) {
-  return this.length = this.stack.push(i)
-};
-
-Stack.prototype.length = 0
 
 module.exports = Stack
