@@ -1,0 +1,16 @@
+{
+  "name": "kaboom",
+  "version": "0.0.0",
+  "description": "a collection of experiements I expect will explode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mrDarcyMurphy/kaboom.git"
+  },
+  "author": "Mr. Darcy Murphy",
+  "license": "WTFPL",
+  "readmeFilename": "README.md"
+}
