@@ -12,5 +12,8 @@
   },
   "author": "Mr. Darcy Murphy",
   "license": "WTFPL",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "mocha": "~1.9.0"
+  }
 }
