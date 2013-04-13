@@ -4,18 +4,23 @@ var Stack = require('../lab/stack.js')
 describe('stack', function(){
 
   var stack
+  var stack2
 
   before(function(){
     stack = new Stack()
+    stack2 = new Stack(['foo', 'bar'])
   })
 
-  it('should be able to initialize', function(){
-    assert(stack, "stack doesn't exist")
+  it('initializes', function(){
     assert(stack instanceof Stack, "stack is not an instanceof Stack")
   })
 
-  it('should initialize with zero length', function(){
+  it('with zero length', function(){
     assert.equal(stack.length, 0)
+  })
+
+  it('initializes with array if passed in', function(){
+    assert.equal(s2.length, 2)
   })
 
   describe('push method', function(){
