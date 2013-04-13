@@ -14,7 +14,9 @@ describe('stack', function(){
     assert(stack instanceof Stack, "stack is not an instanceof Stack")
   })
 
-
+  it('should initialize with zero length', function(){
+    assert.equal(stack.length, 0)
+  })
 
   describe('push method', function(){
 

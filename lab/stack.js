@@ -1,11 +1,13 @@
-var stack = []
-
-var Stack = function() {}
+var Stack = function(stack) {
+  this.stack = Array.isArray(stack) ? stack : [];
+}
 
 Stack.prototype.push = function(i) {
-  stack.push(i);
-  this.length = stack.length;
-  return stack.length;
+  this.stack.push(i);
+  this.length = this.stack.length;
+  return this.stack.length;
 };
+
+Stack.prototype.length = 0
 
 module.exports = Stack
