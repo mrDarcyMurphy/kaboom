@@ -44,8 +44,8 @@ describe('stack', function(){
   describe('top', function(){
 
     it('returns last item', function(){
-      assert.equal(stack0.top, undefined)
-      assert.equal(stack1.top, 'foo')
+      assert.equal(stack0.top(), undefined)
+      assert.equal(stack1.top(), 'foo')
     })
 
   })

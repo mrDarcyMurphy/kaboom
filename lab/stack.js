@@ -13,22 +13,21 @@ var Stack = function(stack) {
   this.length = stack.length
 
   /**
-   * the top value in the stack
-   * @api public
-   */
-  this.top = stack[stack.length-1]
-
-  /**
    * pushes new value onto stack
    * @param {Object} thing to push onto the stack
    * @api public
    */
   this.push = function(i) {
-    this.length = stack.push(i)
-    this.top = stack[this.length-1]
-    return this.length
+    return this.length = stack.push(i)
   }
 
+  /**
+   * returns, but does not pop, the top value
+   * @api public
+   */
+  this.top = function() {
+    return stack[stack.length-1]
+  }
 
 }
 
