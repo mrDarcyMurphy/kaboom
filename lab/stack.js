@@ -3,9 +3,7 @@ var Stack = function(stack) {
 }
 
 Stack.prototype.push = function(i) {
-  this.stack.push(i);
-  this.length = this.stack.length;
-  return this.stack.length;
+  return this.length = this.stack.push(i);
 };
 
 Stack.prototype.length = 0
