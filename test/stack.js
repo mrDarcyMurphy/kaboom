@@ -50,4 +50,22 @@ describe('stack', function(){
 
   })
 
+  describe('pop', function(){
+
+    var popped
+
+    before(function(){
+      popped = stack2.pop()
+    })
+
+    it('returns last item', function(){
+      assert.equal(popped, 'bar')
+    })
+
+    it('removes item from stack', function(){
+      assert.equal(stack2.length(), 1)
+    })
+
+  })
+
 })
