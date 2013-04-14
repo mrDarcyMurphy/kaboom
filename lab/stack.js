@@ -29,6 +29,16 @@ var Stack = function(stack) {
     return stack[stack.length-1]
   }
 
+  /**
+   * returns top value and removes it from stack
+   * @api public
+   */
+  this.pop = function() {
+    var popped = stack.pop()
+    this.length = stack.length
+    return popped
+  }
+
 }
 
 module.exports = Stack

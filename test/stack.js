@@ -63,7 +63,7 @@ describe('stack', function(){
     })
 
     it('removes item from stack', function(){
-      assert.equal(stack2.length(), 1)
+      assert.equal(stack2.length, 1)
     })
 
   })
