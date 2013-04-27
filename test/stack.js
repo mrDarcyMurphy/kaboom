@@ -1,40 +1,43 @@
 var assert = require('assert')
 var Stack = require('../lab/stack.js')
 
-describe('stack', function(){
+describe('Stack', function(){
 
-  describe('initialization', function(){
+  describe('new Stack()', function(){
 
-    describe('with nothing', function(){
+    describe('without arguments', function(){
       before(function(){
         this.stack = new Stack()
       })
-      it('should work', function(){
+      it('should create an instance of Stack', function(){
         assert(this.stack instanceof Stack, "stack is not an instanceof Stack")
       })
-      it('should create a stack with zero length', function(){
+      it('should have zero length', function(){
         assert.equal(this.stack.length, 0)
       })
     })
 
     describe('with an array', function(){
       before(function(){
-        this.stack = new Stack(['foo', 'bar'])
+        this.predefinedStack = ['foo', 'bar']
+        this.stack = new Stack(this.predefinedStack)
       })
-      it('should work', function(){
+      it('should create an instance of Stack', function(){
         assert(this.stack instanceof Stack, "stack is not an instanceof Stack")
       })
-      it('should set stack.length correctly', function(){
-        assert.equal(this.stack.length, 2)
+      it('should have length matching array', function(){
+        assert.equal(this.stack.length, this.predefinedStack.length)
       })
     })
 
-    describe('with something other than an array', function(){
+    describe('with anything else', function(){
       before(function(){
-        this.stack = new Stack('fail')
+        this.stack = new Stack(123, 'foo', ['bar', 'baz'])
       })
-      it('should create an empty stack', function(){
+      it('should create an instance of Stack', function(){
         assert(this.stack instanceof Stack, "stack is not an instanceof Stack")
+      })
+      it('should have zero length', function(){
         assert.equal(this.stack.length, 0)
       })
     })
