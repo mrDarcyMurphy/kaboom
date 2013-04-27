@@ -40,10 +40,12 @@ describe('stack', function(){
     })
 
     describe('with something other than an array', function(){
-      it('should throw an error', function(){
-        assert.throws(function(){
-          var stack = new Stack('fail')
-        }, Error)
+      before(function(){
+        this.stack = new Stack('fail')
+      })
+      it('should create an empty stack', function(){
+        assert(this.stack instanceof Stack, "stack is not an instanceof Stack")
+        assert.equal(this.stack.length, 0)
       })
     })
 
