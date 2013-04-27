@@ -37,7 +37,7 @@ var Stack = function(stack) {
    */
   this.pop = function() {
     if (!stack.length) throw new Error("stack is empty, nothing to pop")
-    this.length = stack.length
+    this.length = stack.length-1
     return stack.pop()
   }
 
