@@ -3,16 +3,6 @@ var Stack = require('../lab/stack.js')
 
 describe('stack', function(){
 
-  // var stack0
-  // var stack1
-  // var stack2
-
-  // before(function(){
-  //   stack0 = new Stack()
-  //   stack1 = new Stack()
-  //   stack2 = new Stack(['foo', 'bar'])
-  // })
-
   describe('initialization', function(){
 
     describe('with nothing', function(){
@@ -64,22 +54,6 @@ describe('stack', function(){
   })
 
   describe('methods', function(){
-
-    before(function(){
-      this.stack = new Stack()
-    })
-    it('should reveal push method', function(){
-      assert(this.stack.push)
-      assert.equal('function', typeof this.stack.push)
-    })
-    it('should reveal top method', function(){
-      assert(this.stack.top)
-      assert.equal('function', typeof this.stack.top)
-    })
-    it('should reveal pop method', function(){
-      assert(this.stack.pop)
-      assert.equal('function', typeof this.stack.pop)
-    })
 
     describe('push', function(){
       before(function(){
