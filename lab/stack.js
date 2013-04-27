@@ -18,6 +18,7 @@ var Stack = function(stack) {
    * @api public
    */
   this.push = function(i) {
+    if (!i) throw new Error("nothing to push")
     return this.length = stack.push(i)
   }
 
@@ -26,6 +27,7 @@ var Stack = function(stack) {
    * @api public
    */
   this.top = function() {
+    if (!stack.length) throw new Error("stack is empty, nothing on top")
     return stack[stack.length-1]
   }
 
@@ -34,7 +36,7 @@ var Stack = function(stack) {
    * @api public
    */
   this.pop = function() {
-    // if ( stack.length == 0 )
+    if (!stack.length) throw new Error("stack is empty, nothing to pop")
     this.length = stack.length
     return stack.pop()
   }
