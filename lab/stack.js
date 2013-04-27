@@ -34,9 +34,9 @@ var Stack = function(stack) {
    * @api public
    */
   this.pop = function() {
-    var popped = stack.pop()
+    // if ( stack.length == 0 )
     this.length = stack.length
-    return popped
+    return stack.pop()
   }
 
 }

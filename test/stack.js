@@ -48,6 +48,12 @@ describe('stack', function(){
       assert.equal(stack1.top(), 'foo')
     })
 
+    it("throws an error if there's no stack length", function(){
+      assert.throws(function(){
+
+      })
+    })
+
   })
 
   describe('pop', function(){
